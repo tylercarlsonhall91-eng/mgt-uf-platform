@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MGT User Fee Intake Platform Starter</title>
+  <meta name="description" content="GitHub Pages starter prototype for a client-facing user fee data intake workflow mapped to the MGT user fee model." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand-lockup" aria-label="MGT">
+      <div class="brand-wordmark">MGT</div>
+      <div class="brand-tagline">Impacting communities for good.</div>
+    </div>
+    <div class="header-copy">
+      <p class="eyebrow">Strategic Financial Planning</p>
+      <h1>User Fee Model Intake</h1>
+      <p>Client-friendly data collection mapped to the MGT user fee model workflow.</p>
+    </div>
+    <div class="header-actions">
+      <button id="loadSampleBtn" class="btn btn-secondary">Load sample</button>
+      <label class="btn btn-secondary file-btn">Import JSON<input id="importInput" type="file" accept="application/json" /></label>
+      <button id="exportBtn" class="btn btn-primary">Export intake JSON</button>
+    </div>
+  </header>
+
+  <main class="app-shell">
+    <aside class="sidebar" aria-label="Workflow navigation">
+      <div class="progress-wrap">
+        <div class="progress-label"><span id="progressText">0% complete</span></div>
+        <div class="progress-bar"><div id="progressFill"></div></div>
+      </div>
+      <nav id="tileNav" class="tile-nav"></nav>
+    </aside>
+
+    <section class="workspace">
+      <div id="alerts" class="alerts" aria-live="polite"></div>
+      <div id="view"></div>
+    </section>
+  </main>
+
+  <template id="emptyStateTemplate">
+    <div class="empty-state">
+      <div class="empty-icon">+</div>
+      <h3>No records yet</h3>
+      <p>Add a row to begin this section.</p>
+    </div>
+  </template>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

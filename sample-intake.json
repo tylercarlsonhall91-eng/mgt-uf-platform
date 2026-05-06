@@ -1,0 +1,39 @@
+{
+  "version": "0.1.0-starter",
+  "project": {
+    "agency": "County of Example",
+    "department": "Planning Department",
+    "fiscalYear": 2026,
+    "projectLead": "MGT Analyst",
+    "clientContact": "planning@example.gov",
+    "notes": "Starter sample for platform testing."
+  },
+  "data": {
+    "services": [
+      { "id": 1, "ord": 1, "serviceName": "Planning Application Review", "annualVolume": 120, "volumeBilled": 120, "currentFee": 250, "feeDescr": "Fixed Fee", "group": "Planning", "subgroup": "Applications", "includeInReport": true, "notesReport": "", "notesMgt": "" },
+      { "id": 2, "ord": 2, "serviceName": "Zoning Verification Letter", "annualVolume": 85, "volumeBilled": 80, "currentFee": 75, "feeDescr": "Fixed Fee", "group": "Planning", "subgroup": "Zoning", "includeInReport": true, "notesReport": "", "notesMgt": "" },
+      { "id": 3, "ord": 3, "serviceName": "Non-fee Counter Support", "annualVolume": 1, "volumeBilled": 0, "currentFee": 0, "feeDescr": "Non-fee Activity", "group": "Planning", "subgroup": "Support", "includeInReport": false, "notesReport": "", "notesMgt": "Internal tracking only" }
+    ],
+    "staff": [
+      { "id": 1, "ord": 1, "positionTitle": "Planner II", "fte": 2, "annualWages": 210000, "hoursPerFTE": 2080, "hoursPerDay": 8, "weeksPerYear": 52, "vacationDays": 13, "holidayDays": 11, "sickDays": 9, "mgmtLeaveDays": 0, "floatingHolidayDays": 2, "trainingDays": 3, "meetingHoursWeek": 2, "breakMinutesDay": 30, "adminPercent": 0.1 },
+      { "id": 2, "ord": 2, "positionTitle": "Permit Technician", "fte": 1, "annualWages": 85000, "hoursPerFTE": 2080, "hoursPerDay": 8, "weeksPerYear": 52, "vacationDays": 13, "holidayDays": 11, "sickDays": 9, "mgmtLeaveDays": 0, "floatingHolidayDays": 2, "trainingDays": 2, "meetingHoursWeek": 1, "breakMinutesDay": 30, "adminPercent": 0.08 }
+    ],
+    "expenses": [
+      { "id": 1, "description": "Software licenses", "totalCost": 30000, "excluded": 0, "allowableIndirect": 20000, "allowableDirect": 10000 },
+      { "id": 2, "description": "Printing and postage", "totalCost": 5000, "excluded": 0, "allowableIndirect": 0, "allowableDirect": 5000 }
+    ],
+    "time": [
+      { "serviceId": 1, "positionId": 1, "task": "Review", "hours": 1.25, "minutes": 0, "percentage": 0 },
+      { "serviceId": 1, "positionId": 2, "task": "Intake", "hours": 0, "minutes": 30, "percentage": 0 },
+      { "serviceId": 2, "positionId": 1, "task": "Research", "hours": 0, "minutes": 35, "percentage": 0 }
+    ],
+    "direct": [
+      { "serviceId": 1, "costType": "Software allocation", "allocationGroup": "materials", "amount": 10000, "notes": "Annualized direct allocation" },
+      { "serviceId": 2, "costType": "Postage", "allocationGroup": "materials", "amount": 1200, "notes": "Annualized" }
+    ],
+    "recommend": [
+      { "serviceId": 1, "recoveryLevel": 1, "recommendedFeeOverride": "", "policyNotes": "" },
+      { "serviceId": 2, "recoveryLevel": 0.8, "recommendedFeeOverride": "", "policyNotes": "Policy recovery below full cost." }
+    ]
+  }
+}
